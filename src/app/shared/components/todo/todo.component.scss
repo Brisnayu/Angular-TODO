@@ -1,0 +1,46 @@
+.todo {
+  border: 1px solid #ccc;
+  padding: 10px;
+  margin-bottom: 10px;
+  display: flex;
+  align-items: center;
+
+  &__checkbox {
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    margin-right: 10px;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+    cursor: pointer;
+    flex-shrink: 0;
+
+    &::after {
+      display: none;
+    }
+
+    &:checked {
+      background-color: #007bff;
+      border-color: #007bff;
+
+      &::after {
+        content: "\f00c";
+        font-family: "Font Awesome 5 Free";
+        font-weight: 900;
+        color: #fff;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+      }
+    }
+  }
+
+  &__description {
+    display: inline-block;
+    font-size: 16px;
+    color: #333;
+    vertical-align: middle;
+    text-decoration: none;
+  }
+}

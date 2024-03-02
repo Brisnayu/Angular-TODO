@@ -1,0 +1,17 @@
+<app-create-todo (createTodo)="addTodo($event)"></app-create-todo>
+
+<div class="todo-list" *ngIf="todos.length > 0; else noTodos">
+  <app-todo
+    *ngFor="let todo of todos"
+    [description]="todo.description"
+    [(isCompleted)]="todo.isCompleted"
+    class="todo-list__item"
+  >
+  </app-todo>
+</div>
+
+<ng-template #noTodos>
+  <div class="todo-list__empty">
+    <p>No hay tareas creadas. ¡Empieza a añadirlas! 🚀</p>
+  </div>
+</ng-template>

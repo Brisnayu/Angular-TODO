@@ -1,0 +1,12 @@
+<div 
+    *ngIf="description"
+    class="todo"
+>
+    <input 
+    type="checkbox" 
+    class="todo__checkbox"
+    [checked]="isCompleted"
+    (change)="toggleIsCompleted()"
+    >
+    <p class="todo__description">{{ description }}</p>
+</div>
