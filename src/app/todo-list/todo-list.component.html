@@ -5,6 +5,7 @@
     *ngFor="let todo of todos"
     [description]="todo.description"
     [(isCompleted)]="todo.isCompleted"
+    (isCompletedChange)="persistTodos()"
     class="todo-list__item"
   >
   </app-todo>
