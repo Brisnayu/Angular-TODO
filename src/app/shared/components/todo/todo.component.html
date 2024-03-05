@@ -1,12 +1,14 @@
 <div 
     *ngIf="description"
     class="todo"
+    appHighlightTodo
+    [isCompletedTodo]="isCompleted"
+    (click)="toggleIsCompleted()"
 >
     <input 
     type="checkbox" 
     class="todo__checkbox"
     [checked]="isCompleted"
-    (change)="toggleIsCompleted()"
     >
     <p class="todo__description">{{ description }}</p>
 </div>

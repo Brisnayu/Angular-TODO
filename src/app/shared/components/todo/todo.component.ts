@@ -1,10 +1,11 @@
 import { CommonModule } from '@angular/common';
 import { Component, EventEmitter, Input, Output } from '@angular/core';
+import { HighlightTodoDirective } from '../../directives/highlight-todo.directive';
 
 @Component({
   selector: 'app-todo',
   standalone: true,
-  imports: [CommonModule],
+  imports: [CommonModule, HighlightTodoDirective],
   templateUrl: './todo.component.html',
   styleUrl: './todo.component.scss',
 })
